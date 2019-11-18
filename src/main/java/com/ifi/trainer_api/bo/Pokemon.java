@@ -5,6 +5,7 @@ import javax.persistence.Embeddable;
 @Embeddable
 public class Pokemon {
 
+    private int id;
     private int pokemonType;
 
     private int level;
@@ -32,4 +33,6 @@ public class Pokemon {
     public void setPokemonType(int pokemonType) {
         this.pokemonType = pokemonType;
     }
+
+
 }

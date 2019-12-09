@@ -8,6 +8,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,20 +18,25 @@ public class Application {
     @Bean
     @Autowired
     public CommandLineRunner demo(TrainerRepository repository) {
+        BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
+
         return (args) -> {
             Trainer ash = new Trainer("Ash");
             Pokemon pikachu = new Pokemon(25, 18);
-            List<Pokemon> listPokemonOfAsh=new ArrayList<>();
-            listPokemonOfAsh.add(pikachu);
-            ash.setTeam(listPokemonOfAsh);
+            List<Pokemon> pokemonListAsh=new ArrayList<>();
+            pokemonListAsh.add(pikachu);
+
+            ash.setTeam(pokemonListAsh);
+            ash.setPassword(bCryptPasswordEncoder.encode("ash_password"));
 
             Trainer misty = new Trainer("Misty");
             Pokemon staryu = new Pokemon(120, 18);
             Pokemon starmie = new Pokemon(121, 21);
-            List<Pokemon> listpokemeonOfMisty=new ArrayList<>();
-            listpokemeonOfMisty.add(staryu);
-            listpokemeonOfMisty.add(starmie);
-            misty.setTeam(listpokemeonOfMisty);
+            List<Pokemon> pokemonList=new ArrayList<>();
+            pokemonList.add(staryu);
+            pokemonList.add(starmie);
+            misty.setTeam(pokemonList);
+            misty.setPassword(bCryptPasswordEncoder.encode("misty_password"));
 
             // save a couple of trainers
             repository.save(ash);

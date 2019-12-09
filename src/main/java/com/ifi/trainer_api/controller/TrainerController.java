@@ -2,15 +2,14 @@ package com.ifi.trainer_api.controller;
 
 import com.ifi.trainer_api.bo.Trainer;
 import com.ifi.trainer_api.service.TrainerService;
-import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.http.HttpEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value = "/trainers")
 public class TrainerController {
-    @Autowired
+
     private final TrainerService trainerService;
 
     TrainerController(TrainerService trainerService){
@@ -18,9 +17,17 @@ public class TrainerController {
     }
 
     @GetMapping(value="/")
-    Iterable<Trainer> getAllTrainers(){
-        return trainerService.getAllTrainers();
+    public Iterable<Trainer> getAllTrainers(){
+        return trainerService.listPokemonsTrainer();
     }
+
+    @PutMapping(value = "/updatePassword",consumes = "application/json")
+    void updatePassword(@RequestBody HttpEntity<String[]> NameAndPassword){
+        Trainer trainer=trainerService.getTrainer(NameAndPassword.getBody()[0]);
+        trainer.setPassword(NameAndPassword.getBody()[1]);
+        trainerService.updateTrainer(trainer);
+    }
+
     @GetMapping(value="/{name}")
     Trainer getTrainer(@PathVariable String name){
     return trainerService.getTrainer(name);
@@ -35,5 +42,7 @@ public class TrainerController {
     void deleteTrainer(@PathVariable String name){
         trainerService.deleteTrainer(name);
     }
+
+
 
 }

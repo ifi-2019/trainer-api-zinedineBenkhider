@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a099ab9e-13d6-427f-b690-dca5637fe31a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifi/trainer_api/config/RestConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ifi/trainer_api/controller/TrainerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifi/trainer_api/controller/TrainerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ifi/trainer_api/controller/TrainerControllerIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ifi/trainer_api/controller/TrainerControllerIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifi/trainer_api/repository/TrainerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifi/trainer_api/repository/TrainerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifi/trainer_api/service/TrainerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifi/trainer_api/service/TrainerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifi/trainer_api/service/TrainerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifi/trainer_api/service/TrainerServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +74,9 @@
       <updated>1575879797740</updated>
       <workItem from="1575879801043" duration="3409000" />
       <workItem from="1575885252660" duration="326000" />
-      <workItem from="1575915260791" duration="807000" />
+      <workItem from="1575915260791" duration="1799000" />
+      <workItem from="1575932649737" duration="746000" />
+      <workItem from="1575935351680" duration="316000" />
     </task>
     <servers />
   </component>
@@ -95,10 +97,14 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="723" y="306" width="424" height="491" key="FileChooserDialogImpl" timestamp="1575915471379">
+    <state x="748" y="258" width="374" height="582" key="#com.intellij.ide.util.MemberChooser" timestamp="1575932944771">
       <screen x="0" y="27" width="1920" height="997" />
     </state>
-    <state x="723" y="306" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.997@0.27.1920.997" timestamp="1575915471379" />
+    <state x="748" y="258" width="374" height="582" key="#com.intellij.ide.util.MemberChooser/0.27.1920.997@0.27.1920.997" timestamp="1575932944771" />
+    <state x="723" y="306" width="424" height="491" key="FileChooserDialogImpl" timestamp="1575933394659">
+      <screen x="0" y="27" width="1920" height="997" />
+    </state>
+    <state x="723" y="306" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.997@0.27.1920.997" timestamp="1575933394659" />
     <state x="429" y="180" width="1022" height="737" key="SettingsEditor" timestamp="1575915477801">
       <screen x="0" y="27" width="1920" height="997" />
     </state>

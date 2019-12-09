@@ -49,7 +49,6 @@ public class TrainerControllerIntegrationTest {
         assertNotNull(ash);
         assertEquals("Ash", ash.getName());
         assertEquals(1, ash.getTeam().size());
-
         assertEquals(25, ash.getTeam().get(0).getPokemonType());
         assertEquals(18, ash.getTeam().get(0).getLevel());
     }
@@ -60,8 +59,8 @@ public class TrainerControllerIntegrationTest {
         assertNotNull(trainers);
         assertEquals(2, trainers.length);
 
-        assertEquals("Ash", trainers[0].getName());
-        assertEquals("Misty", trainers[1].getName());
+        assertEquals("Misty", trainers[0].getName());
+        assertEquals("Ash", trainers[1].getName());
   }
 
     @Test

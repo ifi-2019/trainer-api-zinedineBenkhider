@@ -36,7 +36,7 @@ public class TrainerControllerTest {
     void getAllTrainers_shouldCallTheService() {
         trainerController.getAllTrainers();
 
-        verify(trainerService).getAllTrainers();
+        verify(trainerService).listPokemonsTrainer();
     }
 
     @Test

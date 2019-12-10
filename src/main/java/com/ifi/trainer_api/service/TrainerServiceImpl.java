@@ -10,8 +10,11 @@ import org.springframework.web.client.RestTemplate;
 public class TrainerServiceImpl implements TrainerService{
     private RestTemplate restTemplate;
     private String pokemonTrainerServiceUrl;
-    @Autowired
+
+
     TrainerRepository trainerRepository;
+
+    @Autowired
     public TrainerServiceImpl(TrainerRepository trainerRepo) {
         trainerRepository=trainerRepo;
     }

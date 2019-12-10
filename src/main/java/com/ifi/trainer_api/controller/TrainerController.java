@@ -21,11 +21,12 @@ public class TrainerController {
         return trainerService.listPokemonsTrainer();
     }
 
-    @PutMapping(value = "/updatePassword",consumes = "application/json")
-    void updatePassword(@RequestBody HttpEntity<String[]> NameAndPassword){
+    @PostMapping(value = "/updatePassword",consumes = "application/json")
+    String updatePassword(@RequestBody HttpEntity<String[]> NameAndPassword){
         Trainer trainer=trainerService.getTrainer(NameAndPassword.getBody()[0]);
         trainer.setPassword(NameAndPassword.getBody()[1]);
         trainerService.updateTrainer(trainer);
+        return "redirect:/";
     }
 
     @GetMapping(value="/{name}")
